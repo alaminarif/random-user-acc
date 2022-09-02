@@ -1,0 +1,46 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\alami\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js start
+
+PATH: 
+  C:\Program Files\WindowsApps\Microsoft.PowerShell_7.2.6.0_x64__8wekyb3d8bbwe;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\alami\scoop\apps\gcc\current\bin;C:\Users\alami\scoop\shims;C:\Users\alami\AppData\Local\Microsoft\WindowsApps;C:\Users\alami\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\alami\AppData\Roaming\npm;C:\Users\alami\AppData\Local\Programs\oh-my-posh\bin;C:\Users\alami\AppData\Local\Programs\oh-my-posh\themes;C:\Program Files\heroku\bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.13.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: D:\Coding\Projects\Assignment\ACC\Random-user\package.json: Unexpected string in JSON at position 143
+      at JSON.parse (<anonymous>)
+      at C:\Users\alami\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\alami\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\alami\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "random-user",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "nodemon index.js"
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "node": "^16.17.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
