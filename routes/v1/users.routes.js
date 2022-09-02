@@ -1,5 +1,5 @@
 const express = require("express");
-const usersData = require("../../public/user.json");
+let usersData = require("../../public/user.json");
 const router = express.Router();
 
 //all user
@@ -15,10 +15,6 @@ router.get("/random", (req, res) => {
   res.send(randomUser);
 });
 
-// router.get("/:id", (req, res) => {
-//   res.send("user id");
-// });
-
 // user save
 router.post("/save", (req, res) => {
   const save = req.body;
@@ -27,6 +23,7 @@ router.post("/save", (req, res) => {
   res.send(usersData);
 });
 
+// user update
 router.patch("/update/:id", (req, res) => {
   const { id } = req.params;
   const query = { id: id };
@@ -34,9 +31,16 @@ router.patch("/update/:id", (req, res) => {
   updateData.id = id;
   updateData.name = req.body.name;
   updateData.gender = req.body.gender;
-
   res.send(updateData);
   res.send("2");
+});
+
+// user delete
+router.delete("/delete/:id", (req, res) => {
+  const { id } = req.params;
+  const filter = { id: id };
+  const newData = usersData.filter((user) => user.id != id);
+  res.send(newData);
 });
 
 module.exports = router;

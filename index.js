@@ -16,3 +16,6 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log("listen to port", port);
 });
+// app.all("*", (req, res) => {
+//   res.send("No route found");
+// });
