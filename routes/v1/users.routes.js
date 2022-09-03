@@ -1,5 +1,5 @@
 const express = require("express");
-let usersData = require("../../public/user.json");
+usersData = require("../../public/user.json");
 const router = express.Router();
 
 //all user
@@ -18,7 +18,7 @@ router.get("/random", (req, res) => {
 // user save
 router.post("/save", (req, res) => {
   const save = req.body;
-  const result = usersData.push(save);
+  usersData.push(req.body);
   console.log(save);
   res.send(usersData);
 });
@@ -30,10 +30,16 @@ router.patch("/update/:id", (req, res) => {
   const updateData = usersData.find((user) => user.id == id);
   updateData.id = id;
   updateData.name = req.body.name;
-  updateData.gender = req.body.gender;
+  updateData.contact = req.body.contact;
   res.send(updateData);
-  res.send("2");
 });
+
+// multi user update
+// router.patch("/bulk-update/", (req, res) => {
+//   const body = req.body;
+//   console.log(body);
+//   res.send("multiple obj update");
+// });
 
 // user delete
 router.delete("/delete/:id", (req, res) => {
